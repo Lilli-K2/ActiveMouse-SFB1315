@@ -82,20 +82,22 @@ Changing the resolution as well as frame rate will change the load on the GPU/CP
 
 ### Adding MouseCare
 
-Make sure you have downloaded [MouseCare](https://github.com/Nasr-SFB1315/MouseCare/tree/main/MouseCare) from the resository.
+Make sure you have downloaded [ActiveMouse](https://github.com/Lilli-K2/ActiveMouse) from the repository.
 
 <img align="right" src="https://github.com/Nasr-SFB1315/images/blob/main/dlclivecamera.png?raw=true" />
 <p align="left">
-To add MouseCare you need go to <strong>Processor Dir</strong> and navigate to the <strong>folder</strong> where you have downloaded MouseCare. 
-From the drop down menu <strong>Processor</strong> and select <strong>MouseCare</strong>. Then press <strong>Edit Proc Settings</strong> to make sure that everthing is in order. Finish it by <strong>Set Proc</strong>
+
+Now we need to add ActiveMouse as the processor. Select the folder you saved ActiveMouse to under <strong>Processor Dir</strong>. Confirm that you want to add the folder to your dropdown list for a quicker set-up process the next time you open the deeplabcut-live gui.
+Under <strong>Processor</strong> select <strong>MouseLickImageProcessor</strong>. Make sure to update the processor under <strong>Edit Proc Settings</strong> so everything is loaded correctly.
 </p>
 <kbd>
-<strong>Addition information:</strong>
-Please keep in mind once you have added MouseCare to dlclive it will be part of the loading process of dlvlive. This means if you make faulty changes to MouseCare, it will not only crash MouseCare but dlclive as well.
+<strong>Additional information:</strong>
+The pictures used in the ActiveMouse pop-up can be adjusted to your liking, although we suggest sizing them to 800x600 as this size works best with the tkinter gui in our experience. Make sure to change the lick_image and no_lick_image paths to the actual images you are using.
+You can also adjust the accuracy threshold for displaying an image indicating satisfactory tracking under lik_thresh. It is set to 0.9 by default which has worked well for our past experiments but can obviously adjusted to you needs e.g. 0.99 for only considering very accurately tracked points or 0.7 to also consider more inaccurately tracked points.
+Please note that you should update the Processor under <strong>Edit Proc Settings</strong> every time you make changes to the processor file.
+Any changes to the processor that disrupt regular dlc-live flow will inevitably crash the dlc-live gui. Should you find yourself unable to open the gui consider reverting back to ActiveMouse as it is provided in this guide. 
 </kbd>
 </p>
-
-
 ---
 
 
