@@ -48,7 +48,6 @@ pip install deeplabcut-live-gui
 Please note that you need to manually install seaborn and matplotlib into your environment. This is easily done with a pip install and potentially a pip upgrade of these packages.
 </kbd>
 
-```bash
 start dlclivegui
 ```bash
 dlclivegui
@@ -56,7 +55,7 @@ dlclivegui
 
 
 <kbd>
-<strong>Addition information:</strong>
+<strong>Additional information:</strong>
 Please keep in mind that this guide is for NVIDIA graphic cards. For other graphic cards please follow the instruction of the manufacturer
 </kbd>
 
