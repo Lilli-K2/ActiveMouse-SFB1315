@@ -165,9 +165,10 @@ This allows the user to quickly realise at any point that the tracking has been 
 </p>
 <kbd>
 <strong>Additional information:</strong>
-Common problems we have encountered with inadequate tracking are bad lighting conditions, poor camera angles or camera quality as well as unsuitable deeplabcut networks. For the ladder we suggest retraining an already existing network with further video  footage or considering training a model from scratch to fit your specific conditions. For a detailed guide on training your model see [deeplabcut](https://github.com/DeepLabCut/DeepLabCut).
+Common problems we have encountered with inadequate tracking are bad lighting conditions, poor camera angles or camera quality as well as unsuitable deeplabcut networks. For the ladder we suggest retraining an already existing network with further video  footage or considering training a model from scratch to fit your specific conditions. For a detailed guide on training your model see the deeplabcut documentation.
 </kbd>
 </p>
+
 
 
 
