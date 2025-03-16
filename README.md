@@ -92,8 +92,8 @@ Under <strong>Processor</strong> select <strong>MouseLickImageProcessor</strong>
 </p>
 <kbd>
 <strong>Additional information:</strong>
-The pictures used in the ActiveMouse pop-up can be adjusted to your liking, although we suggest sizing them to 800x600 as this size works best with the tkinter gui in our experience. Make sure to change the lick_image and no_lick_image paths to the actual images you are using.
-You can also adjust the accuracy threshold for displaying an image indicating satisfactory tracking under lik_thresh. It is set to 0.9 by default which has worked well for our past experiments but can obviously adjusted to you needs e.g. 0.99 for only considering very accurately tracked points or 0.7 to also consider more inaccurately tracked points.
+The pictures used in the ActiveMouse pop-up can be adjusted to your liking, although we suggest sizing them to 800x600 as this size works best with the tkinter gui in our experience. Make sure to change the <strong>lick_image</strong> and <strong>no_lick_image</strong> paths to the actual images you are using.
+You can also change the accuracy threshold for displaying an image indicating satisfactory tracking under <strong>lik_thresh</strong>. It is set to 0.9 by default which has worked well for our past experiments but can obviously be adjusted according to your needs e.g. 0.99 for only considering very accurately tracked points or 0.7 to also consider more inaccurately tracked points.
 Please note that you should update the Processor under <strong>Edit Proc Settings</strong> every time you make changes to the processor file.
 Any changes to the processor that disrupt regular dlc-live flow will inevitably crash the dlc-live gui. Should you find yourself unable to open the gui consider reverting back to ActiveMouse as it is provided in this guide. 
 </kbd>
@@ -104,7 +104,7 @@ Any changes to the processor that disrupt regular dlc-live flow will inevitably 
 
 ### Adding the network
 
-Make sure you have downloaded the [trained network](https://github.com/Nasr-SFB1315/MouseCare/tree/main/Network) from the repository.
+Make sure you have downloaded the [trained network](https://github.com/Lilli-K2/ActiveMouse/tree/main/trained-network) from the repository.
 <br>
 For first time use, we recommend using our [Accuracy-Test](https://github.com/Nasr-SFB1315/MouseCare/tree/main/Accuracy-Test) first, to see if the network recognizes the mouse in the setup accurately. 
 
@@ -112,16 +112,25 @@ For first time use, we recommend using our [Accuracy-Test](https://github.com/Na
 
 <img align="right" src="https://github.com/Nasr-SFB1315/images/blob/main/dlclivecamera.png?raw=true" />
 <p align="left">
-Text here on how to proceed
 
+Under <strong>DeepLabCut:</strong> select <strong>add DLC</strong>. Choose a easily recognizable name for the network e.g. ActiveMouse for quicker setup the next time you need it. Now navigate to the folder that contains your exported deeplabcut network under <strong>model path</strong>.
 </p>
 <kbd>
-<strong>Addition information:</strong>
-The network is trained to recognize the facial features of head fixed mice. Given the scope of the project, it is not feasable to train a network to work in every setup imaginable, but it is possible to either train the provided network with new video data from your setup or generate a new network using deeplabcut. The tutorial on how to generate a new network is in the folder network.
-
+<strong>Additional information:</strong>
+Should deeplabcut-live not recognize the exported deeplabcut model it is very likely that the selected folder is not what dlc-live expexted. For the network provided in this repository select the folder named <strong>DLC_LastMouse4Point_resnet_50_iteration-1_shuffle-1</strong>.
 </kbd>
 </p>
 
+Press <strong>Update</strong> to ensure all changes have been saved correctly. 
+You can now either start the tracking immediately by hitting <strong>Init:</strong> or choose to use the <strong>Display DLC Keypoints</strong> feature provided by dlc-livebefore initiating the tracking.
+
+</p>
+<kbd>
+<strong>Additional information:</strong>
+Displaying the Keypoints is a great visual aid in making sure that the network is loaded correctly and in fact tracking the animal. However, it should be noted that especially with higher resolution videos your CPU/GPU is already pretty full and insufficient or lagging display of the keypoints is to be expected. Lagging display or lack thereof is not necessarily an indicator of unsatisfactory tracking, but rather an overloaded CPU/GPU.
+You will also probably find that your videofeed is interrupted while loading the network. As soon as the network is loaded correctly the feed should resume. Should you notice an unusually slow or otherwise faulty video feed consider for example updating from CPU to GPU or using a lower resolution video feed.
+</kbd>
+</p>
 
 ---
 
