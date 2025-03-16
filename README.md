@@ -27,7 +27,6 @@ We recommend using a conda environment:
 For a more detailed guide on installing [deeplabcut-live](https://github.com/DeepLabCut/DeepLabCut-live) and training models with [deeplabcut](https://github.com/DeepLabCut/DeepLabCut) please see their respective documentations.
 
 
-
 Dlc live gui with gpu:
 ```bash
 conda create -n dlc-live python=3.7 tensorflow-gpu==1.13.1
@@ -44,6 +43,12 @@ install dlc live gui
 ```bash
 pip install deeplabcut-live-gui
 ```
+<kbd>
+<strong>Attention</strong>
+Please note that you need to manually install seaborn and matplotlib into your environment. This is easily done with a pip install and potentially a pip upgrade of these packages.
+</kbd>
+
+```bash
 start dlclivegui
 ```bash
 dlclivegui
@@ -98,6 +103,7 @@ Please note that you should update the Processor under <strong>Edit Proc Setting
 Any changes to the processor that disrupt regular dlc-live flow will inevitably crash the dlc-live gui. Should you find yourself unable to open the gui consider reverting back to ActiveMouse as it is provided in this guide. 
 </kbd>
 </p>
+
 ---
 
 
@@ -113,7 +119,7 @@ For first time use, we recommend using our [Accuracy-Test](https://github.com/Na
 <img align="right" src="https://github.com/Nasr-SFB1315/images/blob/main/dlclivecamera.png?raw=true" />
 <p align="left">
 
-Under <strong>DeepLabCut:</strong> select <strong>add DLC</strong>. Choose a easily recognizable name for the network e.g. ActiveMouse for quicker setup the next time you need it. Now navigate to the folder that contains your exported deeplabcut network under <strong>model path</strong>.
+Under <strong>DeepLabCut:</strong> select <strong>add DLC</strong>. Choose an easily recognizable name for the network e.g. ActiveMouse for quicker setup the next time you need it. Now navigate to the folder that contains your exported deeplabcut network under <strong>model path</strong>.
 </p>
 <kbd>
 <strong>Additional information:</strong>
@@ -122,7 +128,7 @@ Should deeplabcut-live not recognize the exported deeplabcut model it is very li
 </p>
 
 Press <strong>Update</strong> to ensure all changes have been saved correctly. 
-You can now either start the tracking immediately by hitting <strong>Init:</strong> or choose to use the <strong>Display DLC Keypoints</strong> feature provided by dlc-livebefore initiating the tracking.
+You can now either start the tracking immediately by hitting <strong>Init</strong> or choose to use the <strong>Display DLC Keypoints</strong> feature provided by dlc-livebefore initiating the tracking.
 
 </p>
 <kbd>
@@ -136,19 +142,31 @@ You will also probably find that your videofeed is interrupted while loading the
 
 ### Setting up the session
 
-Now that all the different softwares haven been loaded into dlc live, we can set up the session
-
+Now we can finally set up the session.
 
 
 <img align="right" src="https://github.com/Nasr-SFB1315/images/blob/main/dlclivecamera.png?raw=true" />
 <p align="left">
-Text here on how to proceed
+Choose a folder under <strong>Directory</strong> you want the data to be saved to.
+Now <strong>Set Up Session</strong>. Once again you may need to wait for the video feed to resume after a short while.
+You will notice that you are now able to press the <strong>On-Button</strong> under <strong>Record</strong>.
 
 </p>
 <kbd>
-<strong>Addition information:</strong>
-It is recommended to check the terminal for information in case it does not work as expected. A common error is that not all the required python packages are installed on your system. Which can be fixed with the proper pip installs.
+<strong>Additional information:</strong>
+Should you run into problems while setting up the Recording session or immediately after starting the recoring it is advised to check the terminal. Oftentimes an incorrect path to one of the images or a missing python package can lead to ActiveMouse not working as expected. Most issues are easily fixed by changing a path or pip installing a necessary python package.
+</kbd>
+</p>
+  
+As soon as you start your recording a <strong>pop-up window</strong> will appear, indicating the accuracy with which your animal is being tracked live.
+With the code provided in ActiveMouse a positive image suggests the tracking of the mouse's neck tracking-point with 90% accuracy.
+  
+This allows the user to quickly realise at any point that the tracking has been unsatisfactory for a significant amount of time and interfere while the experiment is still being run. Thereby hopefully allowing uncomplicated changes to be made to the setup and ensuring swift resumption of the experiment.
 
+</p>
+<kbd>
+<strong>Additional information:</strong>
+Common problems we have encountered with inadequate tracking are bad lighting conditions, poor camera angles or camera quality as well as unsuitable deeplabcut networks. For the ladder we suggest retraining an already existing network with further video  footage or considering training a model from scratch to fit your specific conditions. For a detailed guide on training your model see [deeplabcut](https://github.com/DeepLabCut/DeepLabCut).
 </kbd>
 </p>
 
