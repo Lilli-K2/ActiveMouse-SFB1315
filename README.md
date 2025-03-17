@@ -47,7 +47,6 @@ pip install deeplabcut-live-gui
 <strong>Attention</strong>
 Please note that you need to manually install seaborn and matplotlib into your environment. This is easily done with a pip install and potentially a pip upgrade of these packages.
 </kbd>
-
 start dlclivegui
 ```bash
 dlclivegui
@@ -200,11 +199,11 @@ Some outlier spikes are to be excpected, although we have found that the more pr
 </p>
 
 - <strong>Heatmap</strong>
-This heatmap allows you to quickly gather the extend of the explored space and easily identify areas of more frequent presence.
+This heatmap allows you to quickly gather the extent of the explored space and easily identify areas of more frequent animal presence.
 </p>
 <kbd>
 <strong>Attention:</strong>
-xxxxxxxxxxxxxx
+If a heatmap seems to be representing a part of your setup, it may be attributed to the animal not yet having explored most of it. To counteract this try allowing for a longer recording time.
 </kbd>
 </p>
 
