@@ -66,22 +66,33 @@ Please keep in mind that this guide is for NVIDIA graphic cards. For other graph
 ### Setting up the camera
 
 To be able to use your camera in dlc-live you need to know the correlating index.
-In the folder [Camera-Test](https://github.com/Nasr-SFB1315/MouseCare/tree/main/Camera-Test) is a tutorial on how to find it.
+In the folder [Camera-Test](https://github.com/Lilli-K2/ActiveMouse/tree/main/Camera-Test) is a tutorial on how to find it.
 
 
 <img align="right" src="https://github.com/Nasr-SFB1315/images/blob/main/dlclivecamera.png?raw=true" />
 <p align="left">
-First you need to set up camera by clicking on <strong>Init Cam</strong> make sure that it is set to <strong>OpenCVCam</strong> and give it a name. 
-Click on <strong>Edit Camera Settings</strong> set the <strong>device</strong> to the corresponding index of the camera you use. You can set the values according to your needs. 
+First you need to set up the camera in the dlc-live gui by clicking on <strong>Init Cam</strong>, make sure that it is set to <strong>OpenCVCam</strong> and give it a name. 
+Click on <strong>Edit Camera Settings</strong> and set the <strong>device</strong> to the corresponding index of the camera you use. You can set the values according to your needs. 
 </p>
 <p align="left">
  <kbd>
-<strong>Addition information:</strong>
-In regard to resolution and frame rate: Both can be adjusted according to your needs, but if you change frame rate in dlclive you also need to adjust it in MouseCare. We had success with a frame rate of 30fps, which is what we recommend to start with. ALSO MENTION px factor
-Changing the resolution as well as frame rate will change the load on the GPU/CPU. This dependents on the graphics card. For example, a 4090 can handle higher resolution than a 3060. We recommend testing with different resolution and fps to gauge the capability of your setup.
+<strong>Additional information:</strong>
+In regard to resolution and frame rate: Both can be adjusted according to your needs, but if you change frame rate in dlclive you also need to adjust it in MouseCare. We had success with a frame rate of 30fps, which is what we recommend to start with.
+Changing the resolution as well as frame rate will change the load on the GPU/CPU. This dependents on the graphics card. For example, a 4090 can handle higher resolution than a 3060. We recommend testing with different resolution and fps to gauge the capability of your setup. 
+Should changing the resolution in <strong>Edit Camera Settings</strong> crash the gui, try resetting it to 640, 480 and proceeding as usual.
 </kbd>
 </p>
-
+</p>
+<kbd>
+<strong>Attention!</strong>
+At this point it is of utmost importance to confirm that the <strong>conversion factor</strong> in ActiveMouse matches your video resolution.
+We provide conversion factors for the standard resolutions
+  - HD (1280x720)
+  - Full HD (1920x1080)
+  - 4K (4096x2160)
+For any other resolution see [Camera-Test](https://github.com/Lilli-K2/ActiveMouse/tree/main/Camera-Test)
+</kbd>
+</p>
 
 ---
 
