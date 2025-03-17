@@ -27,11 +27,11 @@ We recommend using a conda environment:
 For a more detailed guide on installing [deeplabcut-live](https://github.com/DeepLabCut/DeepLabCut-live) and training models with [deeplabcut](https://github.com/DeepLabCut/DeepLabCut) please see their respective documentations.
 
 
-Dlc live gui with gpu:
+dlc-live gui with gpu:
 ```bash
 conda create -n dlc-live python=3.7 tensorflow-gpu==1.13.1
 ```
-Dlc live gui without gpu:
+dlc-live gui without gpu:
 ```bash
 conda create -n dlc-live python=3.7 tensorflow==1.13.1 
 ```
@@ -39,31 +39,33 @@ activate the environment
 ```bash
 conda activate dlc-live 
 ```
-install dlc live gui
+install dlc-live gui
 ```bash
 pip install deeplabcut-live-gui
 ```
+</p>
 <kbd>
-<strong>Attention</strong>
+<strong>Attention!</strong>
 Please note that you need to manually install seaborn and matplotlib into your environment. This is easily done with a pip install and potentially a pip upgrade of these packages.
 </kbd>
-start dlclivegui
+</p>
+
+start dlc-live gui
 ```bash
 dlclivegui
 ```
-
-
+</p>
 <kbd>
 <strong>Additional information:</strong>
-Please keep in mind that this guide is for NVIDIA graphic cards. For other graphic cards please follow the instruction of the manufacturer
+Please keep in mind that this guide is for NVIDIA graphic cards. For other graphic cards please follow the instruction of the manufacturer.
 </kbd>
-
+</p>
 
 ---
  
 ### Setting up the camera
 
-To be able to use your camera in dlclive you need to know the correlating index.
+To be able to use your camera in dlc-live you need to know the correlating index.
 In the folder [Camera-Test](https://github.com/Nasr-SFB1315/MouseCare/tree/main/Camera-Test) is a tutorial on how to find it.
 
 
@@ -177,7 +179,7 @@ It is vital that you now press <strong>save video</strong> before proceeding. Th
 
 These figures currently consist of:
 - <strong>Accuracy pie chart</strong>
-This pie chart displays the percentages of good an bad tracking, i.e. how well the tracking-point (default neck with 90% accuracy) was recognized over the course of the recording.
+The pie chart displays the percentages of good an bad tracking, i.e. how well the tracking-point (default neck with 90% accuracy) was recognized over the course of the recording.
 </p>
 <kbd>
 <strong>Attention:</strong>
@@ -188,7 +190,7 @@ Should you however still encounter high ercentages of 'Bad Accuracy' after recor
 </p>
 
 - <strong>Activity linegraph</strong>
-This linegraph is a standard path-time diagram depicting the animal's speed. We are able to determine at a glance if and how much the animal moved over the course of the recording and can also gather how fast the animal moved on average and the full distance it travelled.
+The linegraph is a standard path-time diagram depicting the animal's speed. We are able to determine at a glance if and how much the animal moved over the course of the recording and can also gather how fast the animal moved on average and the full distance it travelled.
 
 </p>
 <kbd>
@@ -198,12 +200,12 @@ Some outlier spikes are to be excpected, although we have found that the more pr
 </kbd>
 </p>
 
-- <strong>Heatmap</strong>
-This heatmap allows you to quickly gather the extent of the explored space and easily identify areas of more frequent animal presence.
+- <strong>Exploration Heatmap</strong>
+The heatmap allows you to quickly gather the extent of the explored space and easily identify areas of more frequent animal presence.
 </p>
 <kbd>
 <strong>Attention:</strong>
-If a heatmap seems to be representing a part of your setup, it may be attributed to the animal not yet having explored most of it. To counteract this try allowing for a longer recording time.
+If a heatmap seems to be representing only a part of your setup, it may be attributed to the animal not yet having explored most of it. To counteract this try allowing for a longer recording time.
 </kbd>
 </p>
 
