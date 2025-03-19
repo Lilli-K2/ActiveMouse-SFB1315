@@ -14,8 +14,7 @@ def Calculation(top_right2, top_left2, bottom_right, bottom_left):
 
     h = abs(bottom_right[1]-top_right2[1])
     print("h is:", h)
-
-    # Convert the height from pixels to centimeters
+    
     h_pixels = h
   
     #CHANGE! according to real life distances
