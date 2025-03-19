@@ -12,8 +12,8 @@ print("Processor opened")
 
 
 class MouseLickImageProcessor(Processor):
-    def __init__(self, lik_thresh=0.9, lick_image=r"C:\Users\Lilli\PycharmProjects\PopUp\MausFreunde.png",
-                 no_lick_image=r"C:\Users\Lilli\PycharmProjects\PopUp\warning2.png"):
+    def __init__(self, lik_thresh=0.9, lick_image=r"C:\path\to\your\image.png",
+                 no_lick_image=r"C:\path\to\your\image.png"):
         super().__init__()
 
         self.lik_thresh = lik_thresh
