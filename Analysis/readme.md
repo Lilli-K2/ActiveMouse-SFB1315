@@ -1,4 +1,4 @@
-This [code](https://github.com/Lilli-K2/ActiveMouse/new/main/Analysis) can be used to analyse all of the tracked points just based on the original .csv file that is saved after the recording is stopped. In addition to the three figures already generated within using the dlc-live gui figures for all of the tracking points are made.
+This [code](https://github.com/Lilli-K2/ActiveMouse/blob/main/Analysis/Analysis.py) can be used to analyse all of the tracked points just based on the original .csv file that is saved after the recording is stopped. In addition to the three figures already generated within using the dlc-live gui figures for all of the tracking points are made.
 
 As of now these figures include:
 - accuracy pie charts for all tracked points plus total Accuracy of tracking ability.
