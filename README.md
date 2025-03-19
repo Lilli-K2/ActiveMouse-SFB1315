@@ -12,7 +12,7 @@ As you choose how to train the model the tracking itself and thus this code are 
   <span style="display: inline-block; width: 60%;">
     <strong>ActiveMouse</strong>  
     <br>  
-   This is the installation guide to setup deeplabcutlive gui with ActiveMouse
+   This guide aims to help you install and use the recquired softwares with ease.
   </span>
 </p>
 
@@ -46,7 +46,7 @@ pip install deeplabcut-live-gui
 </p>
 <kbd>
 <strong>Attention!</strong>
-Please note that you need to manually install seaborn and matplotlib into your environment. This is easily done with a pip install and potentially a pip upgrade of these packages.
+Please note that you need to manually install seaborn and matplotlib into your dlc-live environment. This is easily done with a pip install and potentially a pip upgrade of these packages.
 </kbd>
 </p>
 
@@ -65,12 +65,12 @@ Please keep in mind that this guide is for NVIDIA graphic cards. For other graph
  
 ### Setting up the camera
 
-To be able to use your camera in dlc-live you need to know the correlating index.
-In the folder [Camera-Test](https://github.com/Lilli-K2/ActiveMouse/tree/main/Camera-Test) is a tutorial on how to find it.
-
+First, you need to identify the correct index of your camera to be able to use it.
+We recommend using [this tutorial]((https://github.com/Nasr-SFB1315/MouseCare/tree/main/Camera-Test)) on how to determine your camera's index. 
 
 <img align="right" src="https://github.com/Nasr-SFB1315/images/blob/main/dlclivecamera.png?raw=true" />
 <p align="left">
+
 First you need to set up the camera in the dlc-live gui by clicking on <strong>Init Cam</strong>, make sure that it is set to <strong>OpenCVCam</strong> and give it a name. 
 Click on <strong>Edit Camera Settings</strong> and set the <strong>device</strong> to the corresponding index of the camera you use. You can set the values according to your needs. 
 </p>
@@ -90,7 +90,8 @@ We provide conversion factors for the standard resolutions
   - HD (1280x720)
   - Full HD (1920x1080)
   - 4K (4096x2160)
-For any other resolution see [Camera-Test](https://github.com/Lilli-K2/ActiveMouse/tree/main/Camera-Test)
+For any other resolution see [opencv_tutorials](https://github.com/learncodebygaming/opencv_tutorials). They offer a comprehensive tutorial on OpenCV Object Detection, that may then be used to calculate distances between objects, thereby determining your specific conversion factor.
+
 </kbd>
 </p>
 
@@ -220,4 +221,4 @@ If a heatmap seems to be representing only a part of your setup, it may be attri
 </kbd>
 </p>
 
-We have found that the data is generally better represented by the graphs if a runtime of atleast xxxx is reached. As ActiveMouse Calculates the linegraph and heatmap only with the data deemed to be of acceptable acuuracy you may encounter problems with generating these figures with very short recordings and/or recordings with overall poor tracking.
+We have found that the acquired data is generally better represented by the graphs if a runtime of atleast 5 minutes is reached. As ActiveMouse Calculates the linegraph and heatmap only with the data deemed to be of acceptable accuracy you may encounter problems with generating these figures with very short recordings and/or recordings with overall poor tracking.
