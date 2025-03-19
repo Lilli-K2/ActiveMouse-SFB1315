@@ -2,7 +2,7 @@
 
 If you know or suspect that your resolution does not match any of the conversion factors we already provide in the ActiveMouse code, we encourage acquainting yourself with this [opencv_tutorial](https://github.com/learncodebygaming/opencv_tutorials).
 We specifically used the code provided in the [intro](https://github.com/learncodebygaming/opencv_tutorials/blob/master/001_intro/main.py) and modified it for our specific purposes.
-In [detect object]() you can find this modified code. It now identifies two objects from a screenshot and using the [calculation]() code gives you the distance between these objects in pixels plus the necessary factor to convert it to centimeters.
+In [detect object](https://github.com/Lilli-K2/ActiveMouse/blob/main/Resolution/DetectObject.py) you can find this modified code. It now identifies two objects from a screenshot and using the [calculation](https://github.com/Lilli-K2/ActiveMouse/blob/main/Resolution/Calculation.py) code gives you the distance between these objects in pixels plus the necessary factor to convert it to centimeters.
 
 <strong>Before you start</strong> please note the following steps.
 - Take a video of your setup using the camera and exact conditions your experimental recordings will be under.
