@@ -67,7 +67,7 @@ Please keep in mind that this guide is for NVIDIA graphic cards. For other graph
 ### Setting up the camera
 
 First, you need to identify the correct index of your camera to be able to use it.
-We recommend using [this tutorial]((https://github.com/Nasr-SFB1315/MouseCare/tree/main/Camera-Test)) on how to determine your camera's index. 
+We recommend using [this tutorial](https://github.com/Nasr-SFB1315/MouseCare/tree/main/Camera-Test) on how to determine your camera's index. 
 
 <img align="right" src="https://github.com/Nasr-SFB1315/images/blob/main/dlclivecamera.png?raw=true" />
 <p align="left">
