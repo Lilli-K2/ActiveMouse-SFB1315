@@ -228,3 +228,9 @@ If a heatmap seems to be representing only a part of your setup, it may be attri
 </p>
 
 We have found that the acquired data is generally better represented by the graphs if a runtime of atleast 5 minutes is reached. As ActiveMouse calculates the linegraph and heatmap only with the data deemed to be of acceptable accuracy you may encounter problems generating these figures with very short recordings and/or recordings with overall poor tracking.
+
+---
+
+### Further processing
+
+How you proceed with your data is none of our business, but we humbly suggest checking out our [analysis](https://github.com/Lilli-K2/ActiveMouse/tree/main/Analysis) code. This code generates some basic figures for all of the tracked points and can also be adjusted however you need.
