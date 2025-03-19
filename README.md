@@ -69,7 +69,7 @@ Please keep in mind that this guide is for NVIDIA graphic cards. For other graph
 First, you need to identify the correct index of your camera to be able to use it.
 We recommend using [this tutorial](https://github.com/Nasr-SFB1315/MouseCare/tree/main/Camera-Test) on how to determine your camera's index. 
 
-<img align="right" src="https://github.com/Nasr-SFB1315/images/blob/main/dlclivecamera.png?raw=true" />
+<img align="right" src="https://github.com/Lilli-K2/ActiveMouse/blob/main/pictures/DLClivegui.png?raw=true" />
 <p align="left">
 
 In the dlc-live gui select <strong>Add Camera</strong> in the dropdown-menu of the <strong>Camera</strong> section. Now after clicking on <strong>Init Cam</strong>, choose <strong>OpenCVCam</strong> as your camera type and name your camera something you may easily recognize later. Now press <strong>Edit Camera Settings</strong> and choose the correct camera index. The other values can be modified according to your needs. We have, however, mostly been working with the standard values.
@@ -163,7 +163,7 @@ You will also probably find that your videofeed is interrupted while loading the
 Now we can finally set up the session.
 
 
-<img align="right" src="https://github.com/Nasr-SFB1315/images/blob/main/dlclivecamera.png?raw=true" />
+<img align="right" src="https://github.com/Lilli-K2/ActiveMouse/blob/main/pictures/recording%20on.png?raw=true" />
 <p align="left">
 Choose a folder using <strong>Browse</strong> under <strong>Directory</strong> you want the data to be saved to.
 Now <strong>Set Up Session</strong>. Once again you may need to wait for the video feed to resume after a short while.
