@@ -208,7 +208,7 @@ Should you however still encounter high percentages of 'Bad Accuracy' after reco
 </p>
 
 - <strong>Activity linegraph</strong>
-The linegraph is a standard path-time diagram depicting the animal's speed. We are able to determine at a glance if and how much the animal moved over the course of the recording and can also gather how fast the animal moved on average, as well as the full distance it travelled.
+The linegraph is a standard path-time diagram depicting the animal's speed. You are able to determine at a glance if and how much the animal moved over the course of the recording and can also gather how fast the animal moved on average, as well as the full distance it travelled.
 
 </p>
 <kbd>
