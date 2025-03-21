@@ -120,15 +120,17 @@ dfXdefaultNose = Nose_df["XValueNose"]
 dfydefaultNose = Nose_df["YValueNose"]
 distancesNose = np.sqrt((dfXdefaultNose-dfXvalueNose)**2+(dfydefaultNose-dfyvalueNose)**2)
 
-# conversion factor
-# px/s to cm/s 
+### Conversion factors:
 #distances = (distances/px_per_cm)
-#Pylon/Basler
-#distancesNose = (distancesNose/42)
-#OBS/MKV
-#distancesNose = (distancesNose/13.2)
-#Pylon/Basler downscaled
-distancesNose = (distancesNose/20)
+
+# Pylon/Basler 4096x2160
+distancesNeck = (distancesNeck/42)
+
+# OBS/MKV 1280x720
+#distancesNeck = (distancesNeck/13.2)
+
+# OBS/MKV 1920x1080
+#distancesNeck = (distancesNeck/20)
 
 distancesNose = distancesNose.reset_index()
 distancesNose.columns.values[1] = "distance"
@@ -196,13 +198,17 @@ dfXdefaultNeck = Neck_df["XValueNeck"]
 dfydefaultNeck = Neck_df["YValueNeck"]
 distancesNeck = np.sqrt((dfXdefaultNeck-dfXvalueNeck)**2+(dfydefaultNeck-dfyvalueNeck)**2)
 
-# conversion factor
-# px/s to cm/s
+### Conversion factors:
 #distances = (distances/px_per_cm)
-#distancesNeck = (distancesNeck/42) #change number accordingly
+
+# Pylon/Basler 4096x2160
+distancesNeck = (distancesNeck/42)
+
+# OBS/MKV 1280x720
 #distancesNeck = (distancesNeck/13.2)
-#Pylon/Basler downscaled
-distancesNeck = (distancesNeck/20)
+
+# OBS/MKV 1920x1080
+#distancesNeck = (distancesNeck/20)
 
 distancesNeck= distancesNeck.reset_index()
 distancesNeck.columns.values[1] = "distance"
@@ -267,12 +273,17 @@ dfXdefaultButt = Butt_df["XValueButt"]
 dfydefaultButt = Butt_df["YValueButt"]
 distancesButt = np.sqrt((dfXdefaultButt-dfXvalueButt)**2+(dfydefaultButt-dfyvalueButt)**2)
 
-# conversion factor
-# px/s to cm/s
+### Conversion factors:
 #distances = (distances/px_per_cm)
-#distancesButt = (distancesButt/42) #change number accordingly
-#distancesButt = (distancesButt/13.2)
-distancesButt = (distancesButt/20)
+
+# Pylon/Basler 4096x2160
+distancesNeck = (distancesNeck/42)
+
+# OBS/MKV 1280x720
+#distancesNeck = (distancesNeck/13.2)
+
+# OBS/MKV 1920x1080
+#distancesNeck = (distancesNeck/20)
 
 distancesButt = distancesButt.reset_index()
 distancesButt.columns.values[1] = "distance"
@@ -337,12 +348,17 @@ dfXdefaultTail = Tail_df["XValueTail"]
 dfydefaultTail = Tail_df["YValueTail"]
 distancesTail = np.sqrt((dfXdefaultTail-dfXvalueTail)**2+(dfydefaultTail-dfyvalueTail)**2)
 
-# conversion factor
-# px/s to cm/s
+### Conversion factors:
 #distances = (distances/px_per_cm)
-#distancesTail = (distancesTail/42) #change number accordingly
-#distancesTail = (distancesTail/13.2)
-distancesTail = (distancesTail/20)
+
+# Pylon/Basler 4096x2160
+distancesNeck = (distancesNeck/42)
+
+# OBS/MKV 1280x720
+#distancesNeck = (distancesNeck/13.2)
+
+# OBS/MKV 1920x1080
+#distancesNeck = (distancesNeck/20)
 
 distancesTail = distancesTail.reset_index()
 distancesTail.columns.values[1] = "distance"
