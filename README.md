@@ -69,10 +69,11 @@ Please keep in mind that this guide is for NVIDIA graphic cards. For other graph
 First, you need to identify the correct index of your camera to be able to use it.
 We recommend using [this tutorial](https://github.com/Nasr-SFB1315/MouseCare/tree/main/Camera-Test) on how to determine your camera's index. 
 
-<img align="right" src="https://github.com/Lilli-K2/ActiveMouse/blob/main/pictures/DLClivegui.png?raw=true" />
+<img align="right" src="https://github.com/Lilli-K2/ActiveMouse-SFB1315/blob/main/pictures/AddCamera.png?raw=true" />
 <p align="left">
 
 In the dlc-live gui select <strong>Add Camera</strong> in the dropdown-menu of the <strong>Camera</strong> section. Now after clicking on <strong>Init Cam</strong>, choose <strong>OpenCVCam</strong> as your camera type and name your camera something you may easily recognize later. Now press <strong>Edit Camera Settings</strong> and choose the correct camera index. The other values can be modified according to your needs. We have, however, mostly been working with the standard values.
+<br>
 </p>
 <p align="left">
  <kbd>
@@ -82,7 +83,6 @@ The resolution can also be adjusted according to your needs, but in case changin
 Also please note, changing the resolution in the dlc-live gui does apparently not affect the resolution of the videoinput ActiveMouse works with.
 </kbd>
 </p>
-
 At this point it is of utmost importance to confirm that the <strong>conversion factor</strong> in ActiveMouse matches your video resolution.
 We provide conversion factors for the standard resolutions
   - HD (1280x720)
@@ -93,11 +93,11 @@ For any other resolution see this tutorial on finding your specific [resolution]
 
 ---
 
-### Adding MouseCare
+### Adding ActiveMouse
 
 Make sure you have downloaded [ActiveMouse](https://github.com/Lilli-K2/ActiveMouse) from the repository.
 
-<img align="right" src="https://github.com/Nasr-SFB1315/images/blob/main/dlclivecamera.png?raw=true" />
+<img align="right" src="https://github.com/Lilli-K2/ActiveMouse-SFB1315/blob/main/pictures/UpdateProc.png?raw=true" />
 <p align="left">
 
 Now we need to add ActiveMouse as the processor. Select the folder you saved ActiveMouse to with <strong>Browse</strong> under <strong>Processor Dir</strong>. Confirm that you want to add the folder to your dropdown list for a quicker set-up process the next time you open the deeplabcut-live gui.
@@ -127,7 +127,7 @@ Any changes to the processor that disrupt regular dlc-live flow will inevitably 
 
 Make sure you have downloaded the [trained network](https://github.com/Lilli-K2/ActiveMouse/tree/main/trained-network) from the repository.
 
-<img align="right" src="https://github.com/Nasr-SFB1315/images/blob/main/dlclivecamera.png?raw=true" />
+<img align="right" src="https://github.com/Lilli-K2/ActiveMouse-SFB1315/blob/main/pictures/LiveAddDLC.png?raw=true" />
 <p align="left">
 
 Under <strong>DeepLabCut:</strong> select <strong>add DLC</strong>. Choose a distinct name for the network e.g. ActiveMouse for quicker setup the next time you need it. Now navigate to the folder that contains your exported deeplabcut network under <strong>model path</strong>.
@@ -163,13 +163,16 @@ You will also probably find that your videofeed is interrupted while loading the
 Now we can finally set up the session.
 
 
-<img align="right" src="https://github.com/Lilli-K2/ActiveMouse/blob/main/pictures/recording%20on.png?raw=true" />
+<img align="right" src="https://github.com/Lilli-K2/ActiveMouse-SFB1315/blob/main/pictures/LiveSessionCut.png?raw=true" />
 <p align="left">
 Choose a folder using <strong>Browse</strong> under <strong>Directory</strong> you want the data to be saved to.
 Now <strong>Set Up Session</strong>. Once again you may need to wait for the video feed to resume after a short while.
 You will notice that you are now able to press the <strong>On-Button</strong> under <strong>Record</strong>.
-
 </p>
+
+<p><br><br></p>
+
+<p>
 <kbd>
 <strong>Additional information:</strong>
 Should you run into problems while setting up the Recording session or immediately after starting the recoring it is advised to check the terminal. Oftentimes an incorrect path to one of the images or a missing python package can lead to ActiveMouse not working as expected. Most issues are easily fixed by changing a path or pip installing a necessary python package.
@@ -187,6 +190,17 @@ This allows you to quickly realise at any point that the tracking has been unsat
 Common problems we have encountered with inadequate tracking are bad lighting conditions, poor camera angles or camera quality as well as unsuitable deeplabcut networks. For the latter we suggest retraining an already existing network with further video footage or considering training a model from scratch to fit your specific conditions. For a detailed guide on training your model see the deeplabcut documentation.
 </kbd>
 </p>
+
+<p>
+    <img align="right" src="https://github.com/Lilli-K2/ActiveMouse-SFB1315/blob/main/pictures/LivePopUp.png?raw=true" style="margin-bottom: 20px;">
+</p>
+
+<p align="left">
+    <p style="margin-top: 20px;">
+        This is what live tracking your animal might look like.
+    </p>
+</p>
+
 
 ---
 
