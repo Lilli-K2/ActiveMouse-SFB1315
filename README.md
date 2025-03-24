@@ -10,9 +10,7 @@ As you choose how to train the model the tracking itself and therefore this code
 
 <p align="left">
   <span style="display: inline-block; width: 60%;">
-    <strong>ActiveMouse</strong>  
-    <br>  
-   This guide aims to help you install and use the recquired softwares with ease.
+   This guide aims to help you install and use the recquired software with ease.
   </span>
 </p>
 
