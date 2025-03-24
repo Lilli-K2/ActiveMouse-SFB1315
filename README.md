@@ -110,6 +110,13 @@ Please note that you should update the Processor under <strong>Edit Proc Setting
 </kbd>
 </p>
 
+<p>
+<kbd>
+<strong>Additional information:</strong>
+This code currently creates a lot of .csv files at different stages of the analyis. They are meant as checking points, which can be especially helpful if an error occurs or you suspect the data is not getting analysed properly. You can of course delete all of the <strong>.to_csv</strong> commands if you don't need them. We recommend at least keeping the first csv as it contains all of the raw tracking data, which may be useful to you later. 
+</kbd>
+</p>
+
 </p>
 <kbd>
 <strong>Attention!</strong>
