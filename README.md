@@ -160,17 +160,13 @@ You will also probably find that your videofeed is interrupted while loading the
 
 ### Setting up the session
 
-Now we can finally set up the session.
-
-
-<img align="right" src="https://github.com/Lilli-K2/ActiveMouse-SFB1315/blob/main/pictures/LiveSessionCut.png?raw=true" />
 <p align="left">
+Now we can finally set up the session.
+  <br><br>
 Choose a folder using <strong>Browse</strong> under <strong>Directory</strong> you want the data to be saved to.
 Now <strong>Set Up Session</strong>. Once again you may need to wait for the video feed to resume after a short while.
 You will notice that you are now able to press the <strong>On-Button</strong> under <strong>Record</strong>.
 </p>
-
-<p><br><br></p>
 
 <p>
 <kbd>
@@ -183,8 +179,8 @@ As soon as you start your recording a <strong>pop-up window</strong> will appear
 With the code provided in ActiveMouse a positive image suggests the tracking of the mouse's neck tracking-point with 90% accuracy. It can easily be changed by adjusting the lik_thresh value as you please.
   
 This allows you to quickly realise at any point that the tracking has been unsatisfactory for a significant amount of time and interfere while the experiment is still being run. Thereby hopefully allowing uncomplicated changes to be made to the setup and ensuring swift resumption of the experiment.
-
 </p>
+<p>
 <kbd>
 <strong>Additional information:</strong>
 Common problems we have encountered with inadequate tracking are bad lighting conditions, poor camera angles or camera quality as well as unsuitable deeplabcut networks. For the latter we suggest retraining an already existing network with further video footage or considering training a model from scratch to fit your specific conditions. For a detailed guide on training your model see the deeplabcut documentation.
