@@ -95,7 +95,7 @@ For any other resolution see this tutorial on finding your specific [resolution]
 
 ### Adding ActiveMouse
 
-Make sure you have downloaded [ActiveMouse](https://github.com/Lilli-K2/ActiveMouse) from the repository.
+Make sure you have downloaded [ActiveMouse](https://github.com/Lilli-K2/ActiveMouse-SFB1315/tree/main/ActiveMouse) from the repository.
 
 <img align="right" src="https://github.com/Lilli-K2/ActiveMouse-SFB1315/blob/main/pictures/UpdateProc.png?raw=true" />
 <p align="left">
