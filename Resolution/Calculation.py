@@ -18,7 +18,7 @@ def Calculation(top_right2, top_left2, bottom_right, bottom_left):
     h_pixels = h
   
     #CHANGE! according to real life distances
-    h_cm = 5 #CHANGE! according to real life distances
+    h_cm = 5
   
     pixels_per_cm = h_pixels/h_cm
 
