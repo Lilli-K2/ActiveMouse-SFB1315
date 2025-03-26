@@ -33,7 +33,6 @@ class MouseLickImageProcessor(Processor):
         self.YValueTail = []
         self.AccuracyTail = []
 
-        # Tkinter setup
         self.root = tk.Tk()
         self.root.title("Lick Detection")
 
@@ -43,7 +42,6 @@ class MouseLickImageProcessor(Processor):
         self.update_image(initial=True)
 
     def update_image(self, image_path=None, initial=False):
-        """Loads and updates the displayed image"""
         try:
             if initial:
                 image_path = self.no_lick_image_path  # Default image
@@ -53,7 +51,7 @@ class MouseLickImageProcessor(Processor):
             image = ImageTk.PhotoImage(image)
 
             self.image_label.config(image=image)
-            self.image_label.image = image  # Keep reference
+            self.image_label.image = image
         except Exception as e:
             print(f"Error loading image: {e}")
 
@@ -90,7 +88,6 @@ class MouseLickImageProcessor(Processor):
         return pose
 
     def run_gui(self):
-        """Starts the Tkinter main loop."""
         self.root.mainloop()
 
     def save(self, filename):
@@ -124,6 +121,7 @@ class MouseLickImageProcessor(Processor):
 
             df["scorer"] = df.index
 
+            # saves main csv, consider always keeping this
             df.to_csv(csv_filename, index=False)
 
             save_code = True
@@ -207,11 +205,11 @@ class MouseLickImageProcessor(Processor):
         # Pylon/Basler 4096x2160
         distancesNeck = (distancesNeck/42)
 
-        # OBS/MKV 1280x720
-        # distancesNeck = (distancesNeck/13.2)
-
         # OBS/MKV 1920x1080
         # distancesNeck = (distancesNeck/20)
+
+        # OBS/MKV 1280x720
+        # distancesNeck = (distancesNeck/13.2)
 
         distancesNeck = distancesNeck.reset_index()
         distancesNeck.columns.values[1] = "distance"
@@ -235,13 +233,10 @@ class MouseLickImageProcessor(Processor):
         Neckstd_dev = distancesNeck.iloc[:, 1].std()
         Neckmean_rounded = Neckmean_df.round(3)
         Neckstd_dev_rounded = Neckstd_dev.round(3)
-        print("Mean:\n", Neckmean_rounded)
-        print("\nStandard Deviation:\n", Neckstd_dev_rounded)
 
         dfdistanceValueNeck.to_csv(f"{base_filename}_FinalDistanceNeck.csv")
         distancesNeck.to_csv(f"{base_filename}_beforeIloc.csv")
-        FullDistanceNeck = sum(distancesNeck.iloc[0:, 1])  # not necessarily necessary
-        print("Full walking Distance based on Neck is:", FullDistanceNeck)
+        FullDistanceNeck = sum(distancesNeck.iloc[0:, 1])
 
         plt.rcParams["figure.figsize"] = [7.00, 3.50]
         plt.rcParams["figure.autolayout"] = True
@@ -275,7 +270,7 @@ class MouseLickImageProcessor(Processor):
         plt.savefig(f"{base_filename}_FinalNeck.png", dpi=500)
 
         df1Neck["XValueNeck"] = df1Neck["XValueNeck"].astype(float)
-        df1Neck["YValueNeck"] = df1Neck["YValueNeck"].astype(float)  # needs to be float
+        df1Neck["YValueNeck"] = df1Neck["YValueNeck"].astype(float)
 
         dfHeatNeck = df1Neck.iloc[:, [4, 5]]  # should be only x and y
         dfHeatNeck.to_csv(f"{base_filename}_newtest.csv")
