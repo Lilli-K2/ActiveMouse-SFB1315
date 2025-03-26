@@ -1,6 +1,7 @@
-This is the [network]() we have been using as we conduct our experiments. It is trained to track a <strong>single mouse</strong> based on <strong>four tracking points</strong> from a top-view in the dark under red light.
-These points include the nose, neck, butt and tail of the animal.
+This is the [network](https://github.com/Lilli-K2/ActiveMouse-SFB1315/tree/main/trained-network/exported-models-V2-Copy/DLC_LastMouse4Point_resnet_50_iteration-1_shuffle-1) we have been using as we conduct our experiments. It is trained to track a <strong>single mouse</strong> based on <strong>four tracking points</strong> from a top-view in the dark under red light.
+These points include the nose, neck, butt and tail of the animal. <br>
 
+Make sure to download all of the contents of this folder. Please be aware that the folder is quite large before choosing a location for it. <br>
 After downloading the network find the <strong>pose_cfg.yaml</strong> file and change the <strong>project_path</strong> to the correct path. 
 Should you encounter problems opening the trained network later in the dlc-live gui you might have given the wrong path or may need to manually change the other paths in the .yaml file. Usually choosing the correct <strong>project_path</strong> will suffice.
 
