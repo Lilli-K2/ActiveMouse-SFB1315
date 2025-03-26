@@ -79,7 +79,7 @@ In the dlc-live gui select <strong>Add Camera</strong> in the dropdown-menu of t
 <strong>Additional information:</strong>
 Changing the framerate would lead to needing to change it in ActiveMouse, as well as altering some of the calculations contained within it. This derives from our assuming a framerate of 30fps for the speed and distance calculations. Bear this in mind before modifying the framerate as it will inevitably lead to more complications.
 The resolution can also be adjusted according to your needs, but in case changing the resolution in <strong>Edit Camera Settings</strong> crashes the gui, try resetting it to 640, 480 and proceeding as usual.
-Also please note, changing the resolution in the dlc-live gui does apparently not affect the resolution of the videoinput ActiveMouse works with.
+Also please note, changing the resolution in the dlc-live gui does not affect the resolution of the videoinput ActiveMouse works with.
 </kbd>
 </p>
 At this point it is of utmost importance to confirm that the <strong>conversion factor</strong> in ActiveMouse matches your video resolution.
