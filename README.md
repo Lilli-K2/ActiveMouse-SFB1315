@@ -71,7 +71,7 @@ We recommend using [this tutorial](https://github.com/Nasr-SFB1315/MouseCare/tre
 <p align="left">
 
 Create a <strong>New Config</strong> and name it something memorable.
-In the dlc-live gui select <strong>Add Camera</strong> in the dropdown-menu of the <strong>Camera</strong> section. Now after clicking on <strong>Init Cam</strong>, choose <strong>OpenCVCam</strong> as your camera type and name your camera something you may easily recognize later. Now press <strong>Edit Camera Settings</strong> and choose the correct camera index. The other values can be modified according to your needs. We have, however, mostly been working with the standard values.
+In the dlc-live gui select <strong>Add Camera</strong> in the dropdown-menu of the <strong>Camera</strong> section. Now after clicking on <strong>Init Cam</strong>, choose <strong>OpenCVCam</strong> as your camera type and name your camera something you may easily recognize later. Now press <strong>Edit Camera Settings</strong> and choose the correct camera index for <strong>device</strong>. The other values can be modified according to your needs. We have, however, mostly been working with the standard values.
 <br>
 </p>
 <p align="left">
@@ -84,9 +84,10 @@ Also please note, changing the resolution in the dlc-live gui does apparently no
 </p>
 At this point it is of utmost importance to confirm that the <strong>conversion factor</strong> in ActiveMouse matches your video resolution.
 We provide conversion factors for the standard resolutions
-  - HD (1280x720)
-  - Full HD (1920x1080)
-  - 4K (4096x2160)
+
+- HD (1280x720)
+- Full HD (1920x1080)
+- 4K (4096x2160)
 
 For any other resolution see this tutorial on finding your specific [resolution](https://github.com/Lilli-K2/ActiveMouse/tree/main/Resolution).
 
