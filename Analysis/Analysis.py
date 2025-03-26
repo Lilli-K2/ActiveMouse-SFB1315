@@ -12,7 +12,7 @@ from datetime import datetime
     ALWAYS
     change 'base' to desired filename
     read correct csv file into 'df'
-    choose the correct conversion factor for the dataset
+    choose the correct 'conversion factor' for the dataset
 """
 
 base = "NameOfMyFile"
@@ -39,7 +39,6 @@ df1.to_csv(f"{filename}_{base}_convert.csv")
 dfAccuracyNose = df1["AccuracyNose"]
 dfXNose = df1["XValueNose"]
 dfYNose = df1["YValueNose"]
-print("this is df accuracy nose", dfAccuracyNose)
 dfAccuracyNeck = df1["AccuracyNeck"]
 dfXNeck = df1["XValueNeck"]
 dfYNeck = df1["YValueNeck"]
@@ -49,17 +48,7 @@ dfYButt = df1["YValueButt"]
 dfAccuracyTail = df1["AccuracyTail"]
 dfXTail = df1["XValueTail"]
 dfYTail = df1["YValueTail"]
-print("renaming complete")
 
-print("find the type of accuracy")
-print(df1.dtypes)
-print(dfAccuracyNose.dtypes)
-print(dfAccuracyNeck.dtypes)
-print(dfAccuracyButt.dtypes)
-print(dfAccuracyTail.dtypes)
-print("end of finding")
-
-#set the accuracy value
 dfBadAccuracyNose = df1.query('AccuracyNose <="0.90"')
 dfBadAccuracyNeck = df1.query('AccuracyNeck <="0.90"')
 dfBadAccuracyButt = df1.query('AccuracyButt <="0.90"')
@@ -80,14 +69,8 @@ bad_countTail = len(dfBadAccuracyTail)
 bad_percentageTail = 100/total_rows*bad_countTail
 good_countTail = total_rows - bad_countTail
 
-print("Total good rows Nose:", good_countNose)
-print("Total good rows Neck:", good_countNeck)
-print("Total good rows Butt:", good_countButt)
-print("Total good rows Tail:", good_countTail)
-
 TotalBad_count = sum([bad_countNose, bad_countNeck, bad_countButt, bad_countTail])
 TotalGood_count = 4*total_rows - TotalBad_count
-print("Total good rows:", TotalGood_count)
 
 plt.figure(1)
 labels = ['Good Accuracy', 'Bad Accuracy']
@@ -103,7 +86,6 @@ dfBadAccuracyNose.to_csv(f"{filename}_{base}_BadAccuracyNose.csv")
 df1Nose = df1Nose.reset_index()
 df1Nose.to_csv(f"{filename}_{base}_GoodValuesNose.csv")
 TotalEntriesNose = df1Nose[df1Nose.columns[0]].count()
-print("Total entries nose:", TotalEntriesNose)
 nb_row = 30
 
 Nose_df = df1Nose.rolling(nb_row).mean()[nb_row::nb_row]
@@ -139,9 +121,6 @@ Nose_df_every30["score_difference"] = Nose_df_every30["scorer"].diff()
 Nose_df_every30.to_csv(f"{filename}_{base}_addedscorerNose.csv")
 Nose_df_every30=Nose_df_every30.drop(index=0).reset_index(drop=True)
 distancesNose["DistanceFrames"]=Nose_df_every30["score_difference"].values
-print("what is scorer again")
-print(distancesNose["DistanceFrames"].dtype)
-print("end of question")
 distancesNose["DistanceFrames"] = distancesNose["DistanceFrames"] / 30
 distancesNose = distancesNose.drop(index=0).reset_index(drop=True)
 
@@ -155,15 +134,10 @@ Nosemean_df = distancesNose.iloc[:, 1].mean()
 Nosestd_dev = distancesNose.iloc[:, 1].std()
 Nosemean_rounded = Nosemean_df.round(3)
 Nosestd_dev_rounded = Nosestd_dev.round(3)
-print("Mean:\n", Nosemean_rounded)
-print("\nStandard Deviation:\n", Nosestd_dev_rounded)
-
 
 dfdistanceValueNose.to_csv(f"{filename}_{base}_FinalDistanceNose.csv")
-# Full walking distance
 distancesNose.to_csv(f"{filename}_{base}_beforeIloc.csv")
 FullDistanceNose = sum(distancesNose.iloc[0:, 1])
-print("Full walking Distance based on Nose is:", FullDistanceNose)
 plt.rcParams["figure.figsize"] = [7.00, 3.50]
 plt.rcParams["figure.autolayout"] = True
 
@@ -217,9 +191,6 @@ Neck_df_every30["score_difference"] = Neck_df_every30["scorer"].diff()
 Neck_df_every30.to_csv(f"{filename}_{base}_addedscorerNeck.csv")
 Neck_df_every30=Neck_df_every30.drop(index=0).reset_index(drop=True)
 distancesNeck["DistanceFrames"]=Neck_df_every30["score_difference"].values
-print("what is scorer again")
-print(distancesNeck["DistanceFrames"].dtype)
-print("end of question")
 distancesNeck["DistanceFrames"] = distancesNeck["DistanceFrames"] / 30
 distancesNeck = distancesNeck.drop(index=0).reset_index(drop=True)
 distancesNeck["distance"] = distancesNeck["distance"] / distancesNeck["DistanceFrames"]
@@ -232,12 +203,9 @@ Neckmean_df = distancesNeck.iloc[:, 1].mean()
 Neckstd_dev = distancesNeck.iloc[:, 1].std()
 Neckmean_rounded = Neckmean_df.round(3)
 Neckstd_dev_rounded = Neckstd_dev.round(3)
-print("Mean:\n", Neckmean_rounded)
-print("\nStandard Deviation:\n", Neckstd_dev_rounded)
 
 dfdistanceValueNeck.to_csv(f"{filename}_{base}_FinalDistanceNeck.csv")
 FullDistanceNeck = sum(distancesNeck.iloc[0:, 1])
-print("Full walking Distance based on Neck is:", FullDistanceNeck)
 
 plt.rcParams["figure.figsize"] = [7.00, 3.50]
 plt.rcParams["figure.autolayout"] = True
@@ -292,9 +260,6 @@ Butt_df_every30["score_difference"] = Butt_df_every30["scorer"].diff()
 Butt_df_every30.to_csv(f"{filename}_{base}_addedscorerButt.csv")
 Butt_df_every30=Butt_df_every30.drop(index=0).reset_index(drop=True)
 distancesButt["DistanceFrames"]=Butt_df_every30["score_difference"].values
-print("what is scorer again")
-print(distancesButt["DistanceFrames"].dtype)
-print("end of question")
 distancesButt["DistanceFrames"] = distancesButt["DistanceFrames"] / 30
 distancesButt = distancesButt.drop(index=0).reset_index(drop=True)
 
@@ -308,12 +273,9 @@ Buttmean_df = distancesButt.iloc[:, 1].mean()
 Buttstd_dev = distancesButt.iloc[:, 1].std()
 Buttmean_rounded = Buttmean_df.round(3)
 Buttstd_dev_rounded = Buttstd_dev.round(3)
-print("Mean:\n", Buttmean_rounded)
-print("\nStandard Deviation:\n", Buttstd_dev_rounded)
 
 dfdistanceValueButt.to_csv(f"{filename}_{base}_FinalDistanceButt.csv")
 FullDistanceButt = sum(distancesButt.iloc[0:, 1])
-print("Full walking Distance based on Butt is:", FullDistanceButt)
 
 plt.rcParams["figure.figsize"] = [7.00, 3.50]
 plt.rcParams["figure.autolayout"] = True
@@ -367,9 +329,6 @@ Tail_df_every30["score_difference"] = Tail_df_every30["scorer"].diff()
 Tail_df_every30.to_csv(f"{filename}_{base}_addedscorerTail.csv")
 Tail_df_every30=Tail_df_every30.drop(index=0).reset_index(drop=True)
 distancesTail["DistanceFrames"]=Tail_df_every30["score_difference"].values
-print("what is scorer again")
-print(distancesTail["DistanceFrames"].dtype)
-print("end of question")
 distancesTail["DistanceFrames"] = distancesTail["DistanceFrames"] / 30
 distancesTail = distancesTail.drop(index=0).reset_index(drop=True)
 
@@ -383,13 +342,9 @@ Tailmean_df = distancesTail.iloc[:, 1].mean()
 Tailstd_dev = distancesTail.iloc[:, 1].std()
 Tailmean_rounded = Tailmean_df.round(3)
 Tailstd_dev_rounded = Tailstd_dev.round(3)
-print("Mean:\n", Tailmean_rounded)
-print("\nStandard Deviation:\n", Tailstd_dev_rounded)
 
 dfdistanceValueTail.to_csv(f"{filename}_{base}_FinalDistanceTail.csv")
-# Full walking distance
 FullDistanceTail = sum(distancesTail.iloc[0:, 1])
-print("Full walking Distance based on Tail is:", FullDistanceTail)
 
 plt.rcParams["figure.figsize"] = [7.00, 3.50]
 plt.rcParams["figure.autolayout"] = True
@@ -414,7 +369,7 @@ plt.plot(x_Nose, activityindexNose, linestyle='-', label='Mouse speed [cm/s]')
 
 ax = plt.gca()
 ymin, ymax = ax.get_ylim()
-extra_space = (ymax - ymin) * 0.1  # e.g., add 10% of the current range
+extra_space = (ymax - ymin) * 0.1
 ax.set_ylim(ymin, ymax + extra_space)
 
 bbox_props = dict(facecolor="lightblue", alpha=0.3, edgecolor="black", boxstyle="round,pad=0.5")
@@ -443,10 +398,9 @@ activityindexNeck = list(dfdistanceValueNeck['DistanceNeck'])
 
 plt.plot(x_Neck, activityindexNeck, linestyle='-', label='Mouse speed [cm/s]')
 
-# Get current y-axis limits and add extra space at the top
 ax = plt.gca()
 ymin, ymax = ax.get_ylim()
-extra_space = (ymax - ymin) * 0.1  # e.g., add 10% of the current range
+extra_space = (ymax - ymin) * 0.1
 ax.set_ylim(ymin, ymax + extra_space)
 
 bbox_props = dict(facecolor="lightblue", alpha=0.3, edgecolor="black", boxstyle="round,pad=0.5")
@@ -454,7 +408,6 @@ text = (f"Full Distance: {FullDistanceNeck:.2f}cm\n"
         f"Average Distance: {Neckmean_rounded:.2f}cm\n"
         f"Standard deviation: {Neckstd_dev_rounded:.2f}")
 
-# Place text near the top using axis coordinates
 plt.text(0.05, 0.96, text,
          transform=ax.transAxes,
          fontsize=10,
@@ -474,10 +427,9 @@ activityindexButt = list(dfdistanceValueButt['DistanceButt'])
 
 plt.plot(x_Butt, activityindexButt, linestyle='-', label='Mouse speed [cm/s]')
 
-# Get current y-axis limits and add extra space at the top
 ax = plt.gca()
 ymin, ymax = ax.get_ylim()
-extra_space = (ymax - ymin) * 0.1  # e.g., add 10% of the current range
+extra_space = (ymax - ymin) * 0.1 
 ax.set_ylim(ymin, ymax + extra_space)
 
 bbox_props = dict(facecolor="lightblue", alpha=0.3, edgecolor="black", boxstyle="round,pad=0.5")
@@ -504,7 +456,6 @@ activityindexTail = list(dfdistanceValueTail['DistanceTail'])
 
 plt.plot(x_Tail, activityindexTail, linestyle='-', label='Mouse speed [cm/s]')
 
-# Get current y-axis limits and add extra space at the top
 ax = plt.gca()
 ymin, ymax = ax.get_ylim()
 extra_space = (ymax - ymin) * 0.1 
@@ -515,7 +466,6 @@ text = (f"Full Distance: {FullDistanceTail:.2f}cm\n"
         f"Average Distance: {Tailmean_rounded:.2f}cm\n"
         f"Standard deviation: {Tailstd_dev_rounded:.2f}")
 
-# Place text near the top using axis coordinates
 plt.text(0.05, 0.96, text,
          transform=ax.transAxes,
          fontsize=10,
@@ -530,15 +480,14 @@ plt.ylabel('Distance [cm]')
 plt.savefig(f"{filename}_{base}_FinalTail.png", dpi=500)
 
 df1Nose["XValueNose"] = df1Nose["XValueNose"].astype(float)
-df1Nose["YValueNose"] = df1Nose["YValueNose"].astype(float) #needs to be float
+df1Nose["YValueNose"] = df1Nose["YValueNose"].astype(float)
 
 dfHeatNose = df1Nose.iloc[:, [1, 2]]
 dfHeatNose.to_csv(f"{filename}_{base}_newtest1.csv")
 dfHeatNose = pd.DataFrame(dfHeatNose)
 
 bin_size = 10
-# Create a 2D histogram grid
-x_bins = np.arange(dfHeatNose['XValueNose'].min(), dfHeatNose['XValueNose'].max() + bin_size, bin_size)  # Bin edges for x
+x_bins = np.arange(dfHeatNose['XValueNose'].min(), dfHeatNose['XValueNose'].max() + bin_size, bin_size)
 y_bins = np.arange(dfHeatNose['YValueNose'].min(), dfHeatNose['YValueNose'].max() + bin_size, bin_size)
 
 heatmap, xedges, yedges = np.histogram2d(dfHeatNose['XValueNose'], dfHeatNose['YValueNose'], bins=[x_bins, y_bins])
@@ -546,7 +495,7 @@ heatmap, xedges, yedges = np.histogram2d(dfHeatNose['XValueNose'], dfHeatNose['Y
 plt.figure((10), figsize=(8, 6))
 sns.heatmap(heatmap.T,
             cmap='viridis', cbar=False,
-            square=True, # for square cells, do we want this?
+            square=True,
             )
 plt.title('Heatmap Mouse [Nose]')
 #plt.xlabel('x')
@@ -571,14 +520,13 @@ plt.gca().patch.set_facecolor('none')
 plt.savefig(f"{filename}_{base}_NoMaskHeatmapNose.png", dpi=500, transparent=True)
 
 df1Neck["XValueNeck"] = df1Neck["XValueNeck"].astype(float)
-df1Neck["YValueNeck"] = df1Neck["YValueNeck"].astype(float) #needs to be float
+df1Neck["YValueNeck"] = df1Neck["YValueNeck"].astype(float)
 
 dfHeatNeck = df1Neck.iloc[:, [4, 5]]
 dfHeatNeck.to_csv(f"{filename}_{base}_newtestneck1.csv")
 dfHeatNeck = pd.DataFrame(dfHeatNeck)
 
 bin_size = 10
-# Create a 2D histogram grid
 x_bins = np.arange(dfHeatNeck['XValueNeck'].min(), dfHeatNeck['XValueNeck'].max() + bin_size, bin_size)
 y_bins = np.arange(dfHeatNeck['YValueNeck'].min(), dfHeatNeck['YValueNeck'].max() + bin_size, bin_size)
 
@@ -587,7 +535,7 @@ heatmap, xedges, yedges = np.histogram2d(dfHeatNeck['XValueNeck'], dfHeatNeck['Y
 plt.figure((12), figsize=(8, 6))
 sns.heatmap(heatmap.T,
             cmap='viridis', cbar=False,
-            square=True, # for square cells, do we want this?
+            square=True,
             )
 plt.title('Heatmap Mouse [Neck]')
 #plt.xlabel('x')
@@ -599,7 +547,7 @@ plt.figure((13), figsize=(8, 6))
 mask = (heatmap.T == 0)
 sns.heatmap(heatmap.T,
             cmap='viridis', cbar=False,
-            square=True, # for square cells, do we want this?
+            square=True,
             mask=mask,
             alpha=0.7
             )
@@ -607,19 +555,18 @@ plt.title('Heatmap Mouse [Neck]')
 #plt.xlabel('x')
 #plt.ylabel('y')
 plt.axis('off')
-plt.gcf().patch.set_facecolor('none')  # Set the figure background to be transparent
+plt.gcf().patch.set_facecolor('none')
 plt.gca().patch.set_facecolor('none')
 plt.savefig(f"{filename}_{base}_NoMaskHeatmapNeck.png", dpi=500, transparent=True)
 
 df1Butt["XValueButt"] = df1Butt["XValueButt"].astype(float)
-df1Butt["YValueButt"] = df1Butt["YValueButt"].astype(float) #needs to be float
+df1Butt["YValueButt"] = df1Butt["YValueButt"].astype(float)
 
 dfHeatButt = df1Butt.iloc[:, [7, 8]]
 dfHeatButt.to_csv(f"{filename}_{base}_newtestbutt1.csv")
 dfHeatButt = pd.DataFrame(dfHeatButt)
 
 bin_size = 10
-# Create a 2D histogram grid
 x_bins = np.arange(dfHeatButt['XValueButt'].min(), dfHeatButt['XValueButt'].max() + bin_size, bin_size)
 y_bins = np.arange(dfHeatButt['YValueButt'].min(), dfHeatButt['YValueButt'].max() + bin_size, bin_size)
 
@@ -628,7 +575,7 @@ heatmap, xedges, yedges = np.histogram2d(dfHeatButt['XValueButt'], dfHeatButt['Y
 plt.figure((14), figsize=(8, 6))
 sns.heatmap(heatmap.T,
             cmap='viridis', cbar=False,
-            square=True, # for square cells, do we want this?
+            square=True,
             )
 plt.title('Heatmap Mouse [Butt]')
 #plt.xlabel('x')
@@ -640,7 +587,7 @@ plt.figure((15), figsize=(8, 6))
 mask = (heatmap.T == 0)
 sns.heatmap(heatmap.T,
             cmap='viridis', cbar=False,
-            square=True, # for square cells, do we want this?
+            square=True,
             mask=mask,
             alpha=0.7
             )
@@ -653,14 +600,13 @@ plt.gca().patch.set_facecolor('none')
 plt.savefig(f"{filename}_{base}_NoMaskHeatmapButt.png", dpi=500, transparent=True)
 
 df1Tail["XValueTail"] = df1Tail["XValueTail"].astype(float)
-df1Tail["YValueTail"] = df1Tail["YValueTail"].astype(float) #needs to be float
+df1Tail["YValueTail"] = df1Tail["YValueTail"].astype(float)
 
 dfHeatTail = df1Tail.iloc[:, [10, 11]]
 dfHeatTail.to_csv(f"{filename}_{base}_newtesttail1.csv")
 dfHeatTail = pd.DataFrame(dfHeatTail)
 
 bin_size = 10
-# Create a 2D histogram grid
 x_bins = np.arange(dfHeatTail['XValueTail'].min(), dfHeatTail['XValueTail'].max() + bin_size, bin_size)
 y_bins = np.arange(dfHeatTail['YValueTail'].min(), dfHeatTail['YValueTail'].max() + bin_size, bin_size)
 
@@ -669,7 +615,7 @@ heatmap, xedges, yedges = np.histogram2d(dfHeatTail['XValueTail'], dfHeatTail['Y
 plt.figure((16), figsize=(8, 6))
 sns.heatmap(heatmap.T,
             cmap='viridis', cbar=False,
-            square=True, # for square cells, do we want this?
+            square=True,
             )
 plt.title('Heatmap Mouse [Tail]')
 #plt.xlabel('x')
@@ -681,7 +627,7 @@ plt.figure((17), figsize=(8, 6))
 mask = (heatmap.T == 0)
 sns.heatmap(heatmap.T,
             cmap='viridis', cbar=False,
-            square=True, # for square cells, do we want this?
+            square=True,
             mask=mask,
             alpha=0.7
             )
