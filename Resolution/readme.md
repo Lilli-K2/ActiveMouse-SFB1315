@@ -5,7 +5,7 @@ We specifically used the code provided in the [intro](https://github.com/learnco
 In [detect object](https://github.com/Lilli-K2/ActiveMouse/blob/main/Resolution/DetectObject.py) you can find this modified code. It now identifies two objects from a screenshot and using the [calculation](https://github.com/Lilli-K2/ActiveMouse/blob/main/Resolution/Calculation.py) code gives you the distance between these objects in pixels plus the necessary factor to convert it to centimeters.
 
 <strong>Before you start</strong> please note the following steps.
-- Take a video of your setup using the camera and exact conditions your experimental recordings will be under.
+- Take a video of your setup using the camera and exact conditions your experimental recordings will be made under.
       In this video position two easily recognizable objects a known distance from eachother.
       We recorded three distances (5, 10, 15cm) to minimize human error a bit by averaging the results later.
 - Take screenshots of the different positions and name them Haystack1-3. Make sure that the resolution is not changed when saving          the pngs!
