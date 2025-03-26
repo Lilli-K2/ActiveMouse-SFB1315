@@ -105,7 +105,7 @@ Under <strong>Processor</strong> select <strong>MouseLickImageProcessor</strong>
 </p>
 <kbd>
 <strong>Additional information:</strong>
-The <strong>images</strong> used in the ActiveMouse pop-up can be adjusted to your liking, although we suggest sizing them to 800x600 as this size works best with the tkinter gui in our experience. Make sure to change the <strong>lick_image</strong> and <strong>no_lick_image</strong> paths to the actual images you are using.
+The <strong>images</strong> used in the ActiveMouse pop-up can be adjusted to your liking, although we suggest sizing them to 800x600 as this size works best with the tkinter gui in our experience. Make sure to change the <strong>lick_image</strong> and <strong>no_lick_image</strong> paths to the actual images you are using in the ActiveMouse code.
 You can also change the accuracy threshold for displaying an image indicating satisfactory tracking under <strong>lik_thresh</strong>. It is set to 0.9 by default which has worked well for our past experiments but can obviously be adjusted according to your needs e.g. 0.99 for only considering very accurately tracked points or 0.7 to also consider more inaccurately tracked points.
 If you not only want the pop-up to consider less accurate tracking points but also generate the graphs based on the same accuracy you need to additionally change the <strong>df1.query</strong> command to use the accuracy value of your choosing.
 Please note that you should update the Processor under <strong>Edit Proc Settings</strong> every time you make changes to the processor file.
