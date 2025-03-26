@@ -70,6 +70,7 @@ We recommend using [this tutorial](https://github.com/Nasr-SFB1315/MouseCare/tre
 <img align="right" src="https://github.com/Lilli-K2/ActiveMouse-SFB1315/blob/main/pictures/AddCamera.png?raw=true" />
 <p align="left">
 
+Create a <strong>New Config</strong> and name it something memorable.
 In the dlc-live gui select <strong>Add Camera</strong> in the dropdown-menu of the <strong>Camera</strong> section. Now after clicking on <strong>Init Cam</strong>, choose <strong>OpenCVCam</strong> as your camera type and name your camera something you may easily recognize later. Now press <strong>Edit Camera Settings</strong> and choose the correct camera index. The other values can be modified according to your needs. We have, however, mostly been working with the standard values.
 <br>
 </p>
