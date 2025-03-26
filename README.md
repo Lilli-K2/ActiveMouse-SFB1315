@@ -1,6 +1,6 @@
 # ActiveMouse
 
-With ActiveMouse you can gather at a glance if DeepLabCut-live tracking is satisfactory via a neat pop-up. It also generates graphic reprensentations of your animal's movements immediately after stopping the recording thus giving you an overview of your animal's overall activity.
+With <strong>ActiveMouse</strong> you can gather at a glance if <strong>DeepLabCut-live tracking</strong> is satisfactory via a neat pop-up. It also generates graphic reprensentations of your animal's movements immediately after stopping the recording thus giving you an overview of your animal's overall activity.
 This code is designed to be used with DeepLabCut-live and a DeepLabCut model specifically trained to meet your tracking needs.
 As you choose how to train the model the tracking itself and therefore this code are highly adaptable to all kinds of projects and animals.
 
