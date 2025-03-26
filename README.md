@@ -23,7 +23,7 @@ We recommend using a conda environment:
 ### Install Dependencies
 
 For a more detailed guide on installing [DeepLabCut-live](https://github.com/DeepLabCut/DeepLabCut-live) and training models with [DeepLabCut](https://github.com/DeepLabCut/DeepLabCut) please see their respective documentations. <br>
-Now with Anaconda use the following commands.
+Now in Anaconda use the following commands.
 
 
 dlc-live gui with GPU:
