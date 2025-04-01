@@ -208,7 +208,7 @@ class MouseLickImageProcessor(Processor):
         # OBS/MKV 1920x1080
         # distancesNeck = (distancesNeck/20)
 
-        # OBS/MKV 1280x720
+        # OBS/MP4 1920x1080
         # distancesNeck = (distancesNeck/13.2)
 
         distancesNeck = distancesNeck.reset_index()
