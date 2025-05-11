@@ -219,8 +219,8 @@ The pie chart displays the percentages of good and bad tracking, i.e. how well t
 <kbd>
 <strong>Attention:</strong>
 Please note that substandard distribution of good vs bad tracking is not necessarily representative of the actual tracking quality. If you start the recording before setting the animal up, deeplabcut-live will inevitably struggle with recognizing the animal and contribute to the 'Bad Accuracy' percentage. The same goes for removing the animal before stopping the recording. Do not get discouraged by unsatisfactory 'Good Accuracy'. 
-With our experiments using ActiveMouse we found a percentage of around 8-10% for 'Bad Accuracy' to be fully adequate for a recording with the animal present the entire time.
-Should you however still encounter high percentages of 'Bad Accuracy' after recording only when the animal is present, you may want to consider our suggestions already listed under <strong>Setting up the session</strong>
+With our experiments using ActiveMouse we found a percentage of around 8-10% for 'Bad Accuracy' to be fully adequate for a recording with the animal present and visible the entire time. Adding objects etc. into your setup will inevitably lead to a higher 'Bad Accuracy' percentage, as the animal or parts of it might not always be visible.
+Should you however still encounter high percentages of 'Bad Accuracy' after recording only when the animal is present, you may want to consider our suggestions already listed under <strong>Setting up the session</strong>. 
 </kbd>
 </p>
 
